@@ -4,6 +4,7 @@
 include("baglan.php");
 
 ?>
+
 <!-- ---------------------- -->
 <!DOCTYPE html>
 <html lang="TR">
@@ -19,7 +20,8 @@ include("baglan.php");
 </head>
 
 <body>
-
+<!-- ---------------------------- -->
+<form action="yonetim.php" method="POST" >
 <section class="vh-100 gradient-custom">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
@@ -33,15 +35,15 @@ include("baglan.php");
               <p class="text-white-50 mb-5">LÜTFEN KULLANICI ADINIZ VE ŞİFRENİZİ GİRİNİZ</p>
 
               <div class="form-outline form-white mb-4"> <!-- bu alan doldurması zorunludur şeklinde ayarlanıcak -->
-                <input type="text" id="typeEmailX" class="form-control form-control-lg" />
+                <input type="text" name= " kullanıcı" required="" id="typeEmailX" class="form-control form-control-lg" />
                 <label class="form-label" for="typeEmailX">KULLANICI ADI</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password" id="typePasswordX" class="form-control form-control-lg" />
+                <input type="password"name="sifre" required=""  id="typePasswordX" class="form-control form-control-lg" />
                 <label class="form-label" for="typePasswordX">ŞİFRE</label>
               </div>
-                <form action="yonetim.php" method="POST" >
+                
                     <button class="btn btn-outline-light btn-lg px-5" type="submit">GİRİŞ</button>
                 </form>
               
