@@ -137,7 +137,7 @@ function closeNav() {
       <th scope="col">YAYIN EVİ</th>
       <th scope="col">BASKI NUMARASI</th>
       <th scope="col">ALINMA ZAMANI</th>
-      <th scope="col">GELDİ</th>
+      <th scope="col">DENETİM</th>
     </tr>
 
   </thead>
@@ -166,7 +166,7 @@ function closeNav() {
       <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
       <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
-      <td><a href =""></a><button>KİTAP GELDİ</button></td>
+      <td><a href="kitap_geldi.php?kitapAl_id=<?php echo $kitapcek['kitapAl_id']?>&kitapsil=ok"> <button>KİTAP GELDİ(KAYDI SİL)</button></td></a>
       
     </tr>
     <?php } ?>
