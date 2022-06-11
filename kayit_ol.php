@@ -15,7 +15,12 @@ include("baglan.php");
 
     <h1>KAYIT OL</h1>
 
-    <form action="kayit_tamam.php" method="POST">
+    
+
+</head>
+<body>
+
+<form action="kayit_tamam.php" method="POST">
 
         <input type="text" required="" placeholder="Kullanıcı adınız" name="kayit_adi"/><br><br>
         <input type="email" required=""  placeholder="E-mail" name="kayit_email"/><br><br>
@@ -24,9 +29,6 @@ include("baglan.php");
         <button type="submit" name="insertislemi">KAYDET</button>
         
     </form>
-
-</head>
-<body>
     
 </body>
 </html>

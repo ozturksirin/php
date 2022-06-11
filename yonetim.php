@@ -95,10 +95,10 @@ include("baglan.php");
   <h1>ADMİN</h1>
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
   <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
-  <a href="#">ALINAN KİTAPLAR</a>
+  <a href="alinanKitaplar.php">ALINAN KİTAPLAR</a>
   <a href="#">KİTAP EKLE</a>
   <a href="#">YENİ ADMİN KAYIT</a>
-  <a href="#">ÇIKIŞ</a>
+  <a href="index.php">ÇIKIŞ</a>
 </div>
 
 <div id="main">
@@ -122,9 +122,14 @@ function closeNav() {
 }
 </script>
 
-<h1>ALINAN KİTAPLAR</h1>
+<h1>DENETİM</h1>
     <?php echo "<br>"; ?>
-
+<!-- -------------------- -->
+  <?php  
+  $uyariMetni="DÜZENLEME YAPTIKTAN SONRA SAYFAYI YENİLEYİNİZ!!";
+  echo $uyariMetni;
+  ?>
+<!-- -------------------- -->
 
 <table class="table table-bordered table-dark">
   <thead>
@@ -137,6 +142,7 @@ function closeNav() {
       <th scope="col">YAYIN EVİ</th>
       <th scope="col">BASKI NUMARASI</th>
       <th scope="col">ALINMA ZAMANI</th>
+      <th scope="col">DENETİM</th>
       <th scope="col">DENETİM</th>
     </tr>
 
@@ -166,6 +172,7 @@ function closeNav() {
       <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
       <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+      <td><a href="duzenle.php?kitapAl_id=<?php echo $kitapcek['kitapAl_id']?>"> <button>DÜZENLE</button></td></a>
       <td><a href="kitap_geldi.php?kitapAl_id=<?php echo $kitapcek['kitapAl_id']?>&kitapsil=ok"> <button>KİTAP GELDİ(KAYDI SİL)</button></td></a>
       
     </tr>
@@ -173,6 +180,40 @@ function closeNav() {
   </tbody>
  </table>
 
+ <?php
+
+ if(isset($_POST['duzenlemeislemi'])) 
+{
+
+  $kitapAl_id=$_POST['kitapAl_id'];
+
+    $kitap_kaydet=$db ->prepare("UPDATE  proje.kitapal SET 
+
+    kitapAl_adi=:kitapAl_adi,
+    kitapAl_yazar_adi=:kitapAl_yazar_adi,
+    kitapAl_sayfa=:kitapAl_sayfa,
+    kitapAl_yayin_evi=:kitapAl_yayin_evi,
+    kitapAl_baski_no=:kitapAl_baski_no
+    WHERE kitapAl_id={$_POST['kitapAl_id']}
+        ");
+
+    $alindi=$kitap_kaydet->execute(array(
+
+        'kitapAl_adi' => $_POST['kitapAl_adi'],
+        'kitapAl_yazar_adi' => $_POST['kitapAl_yazar_adi'],
+        'kitapAl_sayfa' => $_POST['kitapAl_sayfa'],
+        'kitapAl_yayin_evi' => $_POST['kitapAl_yayin_evi'],
+        'kitapAl_baski_no' => $_POST['kitapAl_baski_no']
+    ));
+
+    
+    
+
+}
+
+?>
+
+<!-- ---------------------------------------------------------------- -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

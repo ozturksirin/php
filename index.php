@@ -58,8 +58,8 @@ include("baglan.php");
     <div class="card m-5 p-5">
 
     <form class="giris " action="kitap_al.php" method="GET">
-        KULLANICI ADI:<input type="text" name="giris_kAdi"/><br><br>
-        Şifre:<input type="password" name="giris_sifre"><br><br>
+        KULLANICI ADI:<input required="" type="text" name="giris_kAdi"/><br><br>
+        Şifre:<input type="password" required= "" name="giris_sifre"><br><br>
         <button type="submit" name="btn_giris">GİRİŞ</button>
 
     </form>
