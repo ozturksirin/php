@@ -79,16 +79,17 @@ require_once 'baglan.php';
     
   $kitap_listele=$db ->prepare("SELECT * FROM proje.kitapal");
   $kitap_listele->execute();
-
+  $say=0;
   while($kitapcek=$kitap_listele->fetch(PDO::FETCH_ASSOC))
-  { ?>
+  { $say++;?>
       
   
   
   <!-- -------------------- -->
   <tbody>
     <tr>
-      <th scope="row">1</th>
+    
+      <th scope="row"><?php echo $say?></th>
       <td><?php echo $kitapcek['kitapAl_id'] ?></td>
       <td><?php echo $kitapcek['kitapAl_adi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_yazar_adi'] ?></td>

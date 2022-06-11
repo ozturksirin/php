@@ -1,3 +1,8 @@
+<?php
+include("baglan.php");
+
+?>
+<!-- --------------------------- -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -80,6 +85,8 @@
 
 <body>
 
+
+
 <div id="YanMenu" class="sidenav">
   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">
 
@@ -87,9 +94,10 @@
 
   <h1>ADMİN</h1>
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
-  <a href="#">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
-  <a href="#">PHP</a>
-  <a href="#">CSS</a>
+  <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
+  <a href="#">ALINAN KİTAPLAR</a>
+  <a href="#">KİTAP EKLE</a>
+  <a href="#">YENİ ADMİN KAYIT</a>
   <a href="#">ÇIKIŞ</a>
 </div>
 
@@ -113,14 +121,57 @@ function closeNav() {
   document.body.style.backgroundColor = "white";
 }
 </script>
+
+<h1>ALINAN KİTAPLAR</h1>
+    <?php echo "<br>"; ?>
+
+
+<table class="table table-bordered table-dark">
+  <thead>
+    <tr>
+      <th scope="col">NO</th>
+      <th scope="col">ID</th>
+      <th scope="col">ADI</th>
+      <th scope="col">YAZAR ADI</th>
+      <th scope="col">SAYFA SAYISI</th>
+      <th scope="col">YAYIN EVİ</th>
+      <th scope="col">BASKI NUMARASI</th>
+      <th scope="col">ALINMA ZAMANI</th>
+      <th scope="col">GELDİ</th>
+    </tr>
+
+  </thead>
+  <!-- -------------------- -->
+  <?php 
   
 
-
-
-
-
     
-
+  $kitap_listele=$db ->prepare("SELECT * FROM proje.kitapal");
+  $kitap_listele->execute();
+  $say=0;
+  while($kitapcek=$kitap_listele->fetch(PDO::FETCH_ASSOC))
+  { $say++;?>
+      
+  
+  
+  <!-- -------------------- -->
+  <tbody>
+    <tr>
+    
+      <th scope="row"><?php echo $say?></th>
+      <td><?php echo $kitapcek['kitapAl_id'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_adi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_yazar_adi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_sayfa'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
+      <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+      <td><a href =""></a><button>KİTAP GELDİ</button></td>
+      
+    </tr>
+    <?php } ?>
+  </tbody>
+ </table>
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
