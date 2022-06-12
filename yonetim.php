@@ -98,6 +98,7 @@ include("baglan.php");
   <a href="alinanKitaplar.php">ALINAN KİTAPLAR</a>
   <a href="#">KİTAP EKLE</a>
   <a href="#">YENİ ADMİN KAYIT</a>
+  <a href="#">KULLANICI BİLGİLERİ</a>
   <a href="index.php">ÇIKIŞ</a>
 </div>
 

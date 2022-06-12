@@ -57,12 +57,19 @@ include("baglan.php");
    <div class="container">
     <div class="card m-5 p-5">
 
-    <form class="giris " action="kitap_al.php" method="GET">
+    <form class="giris " action="kitap_al.php" method="POST">
         KULLANICI ADI:<input required="" type="text" name="giris_kAdi"/><br><br>
-        Şifre:<input type="password" required= "" name="giris_sifre"><br><br>
+        Şifre:<input required= "" type="password"  name="giris_sifre"><br><br>
         <button type="submit" name="btn_giris">GİRİŞ</button>
 
     </form>
+
+<!-- --------------------------------------------------------------------------------- -->
+    
+
+
+
+    <!-- --------------------------------------------------------------------------------- -->
 
     <div class="image">
 
