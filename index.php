@@ -2,19 +2,9 @@
 
 include("baglan.php");
 
-?>
 
-<?php
-/*
-        if($_GET['durum']=="ok"){
-            echo "başarılı bir şekilde kayıt oldunuz lütfen giriş yapınız";
-        }
 
-        elseif($_GET['durum']=="no"){
 
-            echo "kayıt başarısız tekrar deneyiniz";
-        }
-*/
 ?>
 
 
@@ -53,16 +43,30 @@ include("baglan.php");
    </header>
 
 
+  <?php
+  if(isset($_GET['durum'])=="basarisiz")
+  {
+    ?>
+      <div class="alert alert-danger">    
+        <strong>HATA! </strong>GİRİŞ BAŞARISIZ TEKRAR KONTROL EDİNİZ!!
+      </div>
+    <?php
+  }
+  ?>
+
     
    <div class="container">
     <div class="card m-5 p-5">
-
+<!-- giriş yapma kısmı -->
     <form class="giris " action="kitap_al.php" method="POST">
-        KULLANICI ADI:<input required="" type="text" name="giris_kAdi"/><br><br>
-        Şifre:<input required= "" type="password"  name="giris_sifre"><br><br>
+        KULLANICI ADI:<input required="" type="text" name="kayit_adi"/><br><br>
+        Şifre:<input required= "" type="password"  name="kayit_sifre"><br><br>
         <button type="submit" name="btn_giris">GİRİŞ</button>
 
     </form>
+
+
+    
 
 <!-- --------------------------------------------------------------------------------- -->
     

@@ -2,6 +2,8 @@
 
 require_once 'baglan.php';
 
+ob_start();
+session_start();
 
 
 ?>
@@ -75,15 +77,12 @@ require_once 'baglan.php';
   <!-- -------------------- -->
   <?php 
   
-
-    
   $kitap_listele=$db ->prepare("SELECT * FROM proje.kitapal");
   $kitap_listele->execute();
   $say=0;
   while($kitapcek=$kitap_listele->fetch(PDO::FETCH_ASSOC))
   { $say++;?>
       
-  
   
   <!-- -------------------- -->
   <tbody>
@@ -116,3 +115,58 @@ require_once 'baglan.php';
     
  </body>
 </html>
+
+
+<?php
+  
+
+$uyarıkAdi="kullanıcı adınızı giriniz";
+$uyariSifre="sifrenizi giriniz";
+
+
+if(isset($_POST['btn_giris']))
+{
+
+  $kayit_adi=htmlspecialchars( $_POST['kayit_adi']);
+  $kayit_sifre= htmlspecialchars( $_POST['kayit_sifre']);
+  
+
+  if(!$kayit_adi)
+  {
+
+    echo $uyarıkAdi;
+
+  }
+
+  elseif(!$kayit_sifre)
+  {
+    echo $uyariSifre; 
+  }
+
+  else
+  {
+    $kayitsor=$db->prepare("SELECT * FROM proje.kayit_ol WHERE kayit_adi = ? and kayit_sifre = ?");
+    $kayitsor->execute([
+
+      $kayit_adi,$kayit_sifre
+    ]);
+
+    $say=$kayitsor->rowCount();
+
+    if($say==1)
+    {
+      $_SESSION['kayit_adi']=$kayit_adi;
+      echo "giriş başarılı";
+      header('location: kitap_al.php?durum=basarili');
+    }
+
+    else 
+    {
+      echo "hata oluştu";
+      header('location: index.php?durum=basarisiz');
+    }
+  }
+
+}
+
+?>
