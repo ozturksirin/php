@@ -4,6 +4,7 @@ require_once 'baglan.php';
 
 ob_start();
 session_start();
+include 'oturum_kontrol.php';
 
 
 ?>
