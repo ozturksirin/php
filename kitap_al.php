@@ -28,6 +28,7 @@ include 'oturum_kontrol.php';
       <a class="nav-item nav-link active" href="./hakkında.php">HAKKINDA <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./iletisim.php">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
+      <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
       
       
     </div>
@@ -158,7 +159,7 @@ if(isset($_POST['btn_giris']))
     {
       $_SESSION['kayit_adi']=$kayit_adi;
       echo "giriş başarılı";
-      header('location: kitap_al.php?durum=basarili');
+      header('refresh: index.php.php?durum=basarili');
     }
 
     else 
