@@ -5,9 +5,6 @@ include("baglan.php");
 include 'yonetim_kontrol.php'
 
 
-
-
-
 ?>
 
 <?php
