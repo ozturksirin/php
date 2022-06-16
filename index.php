@@ -95,6 +95,50 @@ include("baglan.php");
 
 </div>
 </div> 
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">NO</th>
+      <th scope="col">ID</th>
+      <th scope="col">ADI</th>
+      <th scope="col">YAZAR ADI</th>
+      <th scope="col">SAYFA SAYISI</th>
+      <th scope="col">YAYIN EVİ </th>
+      <th scope="col">BASKI NUMARASI</th>
+    </tr>
+  </thead>
+  <tbody>
+  <h1>ALINMIŞ KİTAPLAR</h1>
+  <!-- ---------------------------------------- -->
+  <?php 
+  
+  $kitap_listele=$db ->prepare("SELECT * FROM proje.kitapal");
+  $kitap_listele->execute();
+  $say=0;
+  while($kitapcek=$kitap_listele->fetch(PDO::FETCH_ASSOC))
+  { $say++;?>
+      
+  
+  
+  <!-- ----------------------------------------------------- -->
+  
+  <tbody>
+    <tr>
+    
+      <th scope="row"><?php echo $say?></th>
+      <td><?php echo $kitapcek['kitapAl_id'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_adi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_yazar_adi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_sayfa'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
+      <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
+      <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
+
     
 
 

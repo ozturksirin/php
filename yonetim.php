@@ -1,6 +1,6 @@
 <?php
 include("baglan.php");
-include 'oturum_kontrol.php'; // daha sonra düzeltimesi gerekebilir
+//include 'oturum_kontrol.php'; // daha sonra düzeltimesi gerekebilir
 ?>
 <!-- --------------------------- -->
 <!DOCTYPE html>

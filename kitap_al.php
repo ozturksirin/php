@@ -164,6 +164,7 @@ if(isset($_POST['btn_giris']))
 
     else 
     {
+      $_SESSION['kayit_adi']=$kayit_adi;
       echo "hata oluştu";
       header('location: index.php?durum=basarisiz');
     }
