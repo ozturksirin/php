@@ -115,6 +115,7 @@ include 'oturum_kontrol.php';
 
  <body>
     
+ <p>© 2022 Öztürk Şirin Onyedi eylül üniversitesi Bandırma Meslek Yüksekokulu</p>
  </body>
 </html>
 
@@ -164,7 +165,7 @@ if(isset($_POST['btn_giris']))
 
     else 
     {
-      $_SESSION['kayit_adi']=$kayit_adi;
+      
       echo "hata oluştu";
       header('location: index.php?durum=basarisiz');
     }

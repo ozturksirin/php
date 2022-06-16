@@ -109,6 +109,7 @@ include("baglan.php");
     </tr>
   </thead>
   <tbody>
+    
   <h1>ALINMIŞ KİTAPLAR</h1>
   <!-- ---------------------------------------- -->
   <?php 
@@ -142,6 +143,7 @@ include("baglan.php");
     
 
 
+<p>© 2022 Öztürk Şirin Onyedi eylül üniversitesi Bandırma Meslek Yüksekokulu</p>
 </body>
 
 

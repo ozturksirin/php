@@ -35,12 +35,12 @@ include("baglan.php");
               <p class="text-white-50 mb-5">LÜTFEN KULLANICI ADINIZ VE ŞİFRENİZİ GİRİNİZ</p>
 
               <div class="form-outline form-white mb-4"> <!-- bu alan doldurması zorunludur şeklinde ayarlanıcak -->
-                <input type="text" name= " kullanıcı" required="" id="typeEmailX" class="form-control form-control-lg" />
-                <label class="form-label" for="typeEmailX">KULLANICI ADI</label>
+                <input type="text" name= "yonetim_adi" required=""  class="form-control form-control-lg" />
+                <label class="form-label">KULLANICI ADI</label>
               </div>
 
               <div class="form-outline form-white mb-4">
-                <input type="password"name="sifre" required=""  id="typePasswordX" class="form-control form-control-lg" />
+                <input type="password" name="yonetim_sifre" required=""  id="typePasswordX" class="form-control form-control-lg" />
                 <label class="form-label" for="typePasswordX">ŞİFRE</label>
               </div>
                 
