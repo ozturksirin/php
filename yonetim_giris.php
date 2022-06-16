@@ -1,9 +1,18 @@
-
-
 <?php
+ob_start();
+session_start();
 include("baglan.php");
 
-?>
+if(isset($_GET['durum'])=="no")
+{
+  ?>
+      <div class="alert alert-danger">    
+        <strong>HATA! </strong>GİRİŞ BAŞARISIZ GİRİŞ BİLGİLERİNİZİ TEKRAR KONTROL EDİNİZ!!
+      </div>
+    <?php
+  }
+  ?>
+
 
 <!-- ---------------------- -->
 <!DOCTYPE html>
@@ -44,7 +53,7 @@ include("baglan.php");
                 <label class="form-label" for="typePasswordX">ŞİFRE</label>
               </div>
                 
-                    <button class="btn btn-outline-light btn-lg px-5" type="submit">GİRİŞ</button>
+                    <button class="btn btn-outline-light btn-lg px-5" name="yonetim_giris" type="submit">GİRİŞ</button>
                 </form>
               
 

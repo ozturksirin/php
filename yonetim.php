@@ -1,7 +1,57 @@
 <?php
+ob_start();
+session_start();
 include("baglan.php");
-//include 'oturum_kontrol.php'; // daha sonra düzeltimesi gerekebilir
+include 'yonetim_kontrol.php'
+
+
+
+
+
 ?>
+
+<?php
+
+if(isset($_POST['yonetim_giris']))
+{
+  $yonetim_adi= $_POST['yonetim_adi'];
+
+  $yonetim_sifre=md5($_POST['yonetim_sifre']);
+
+  $yonetim_sor=$db ->prepare("SELECT * FROM proje.yonetim WHERE yonetim_adi=:adi AND yonetim_sifre=:sifre");
+  $yonetim_sor->execute(array(
+    'adi'=>$yonetim_adi,
+    'sifre'=>$yonetim_sifre
+  ));
+
+  $say=$yonetim_sor->rowCount();
+
+  if($say==1)
+  {
+    $_SESSION['yonetim_adi']=$yonetim_adi;
+    header("Location: yonetim.php?durum=YES");
+    exit;
+
+  }
+
+  else
+  {
+
+    header("Location: yonetim_giris.php?durum=no");
+    exit;
+  }
+}
+
+
+
+
+
+
+
+
+?>
+
+
 <!-- --------------------------- -->
 <!DOCTYPE html>
 <html lang="tr">
@@ -24,6 +74,9 @@ include("baglan.php");
       <a class="nav-item nav-link active" href="./hakkında.php">HAKKINDA <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./iletisim.php">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
+      <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
+
+
       
       
     </div>
@@ -92,7 +145,8 @@ include("baglan.php");
 
   &times;</a>
 
-  <h1>ADMİN</h1>
+  <H2>HOŞGELDİN</H2>
+  <h1><?php echo $_SESSION['yonetim_adi']; ?></h1>
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
   <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
   <a href="alinanKitaplar.php">ALINAN KİTAPLAR</a>
