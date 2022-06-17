@@ -39,13 +39,6 @@ if(isset($_POST['yonetim_giris']))
   }
 }
 
-
-
-
-
-
-
-
 ?>
 
 
@@ -146,11 +139,10 @@ if(isset($_POST['yonetim_giris']))
   <h1><?php echo $_SESSION['yonetim_adi']; ?></h1>
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
   <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
-  <a href="alinanKitaplar.php">ALINAN KİTAPLAR</a>
   <a href="#">KİTAP EKLE</a>
   <a href="#">YENİ ADMİN KAYIT</a>
-  <a href="#">KULLANICI BİLGİLERİ</a>
-  <a href="index.php">ÇIKIŞ</a>
+  <a href="kayitli_kullanicilar.php">KAYITLI KULLANICILAR</a>
+  <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
 </div>
 
 <div id="main">
