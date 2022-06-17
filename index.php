@@ -30,8 +30,8 @@ include("baglan.php");
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="./hakkında.php">HAKKINDA <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="./iletisim.php">İLETİŞİM</a>
+      <a class="nav-item nav-link active" href="./hakkında.html">HAKKINDA <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
       <a class="nav-item nav-link" href="./kitap_al.php">KİTAP AL</a>
       <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
@@ -64,7 +64,6 @@ include("baglan.php");
         KULLANICI ADI:<input required="" type="text" name="kayit_adi"/><br><br>
         Şifre:<input required= "" type="password"  name="kayit_sifre"><br><br>
         <button type="submit" name="btn_giris">GİRİŞ</button>
-
     </form>
 
 
