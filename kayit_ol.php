@@ -27,7 +27,7 @@ include("baglan.php");
     <div class="navbar-nav">
       <a class="nav-item nav-link active" href="./hakkında.html">HAKKINDA <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
-      <a class="nav-item nav-link" href="./yonetim_giris.php">YÖNETİM</a>
+      <a class="nav-item nav-link" href="./yonetim.php">YÖNETİM</a>
       
       
     </div>
