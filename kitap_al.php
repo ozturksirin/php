@@ -5,6 +5,7 @@ require_once 'baglan.php';
 ob_start();
 session_start();
 include 'oturum_kontrol.php';
+//include 'yonetim_kontrol.php';
 
 
 ?>
@@ -97,7 +98,7 @@ include 'oturum_kontrol.php';
       <td><?php echo $kitapcek['kitapAl_sayfa'] ?></td>
       <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
-      <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+      <td><?php echo $kitapcek['kitapal_zaman'] ?></td>
       
     </tr>
     <?php } ?>
@@ -161,6 +162,8 @@ if(isset($_POST['btn_giris']))
       $_SESSION['kayit_adi']=$kayit_adi;
       echo "giriş başarılı";
       header('refresh: index.php.php?durum=basarili');
+
+      
     }
 
     else 

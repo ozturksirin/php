@@ -105,7 +105,7 @@ $duzenle=$kitapduzenle->fetch(PDO::FETCH_ASSOC);
       <td><?php echo $kitapcek['kitapAl_sayfa'] ?></td>
       <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
-      <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+      <td><?php echo $kitapcek['kitapal_zaman'] ?></td>
       
     </tr>
     <?php } ?>
