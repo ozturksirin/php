@@ -65,7 +65,7 @@ if(isset($_GET['kitapgonderislemi']))
 }
 
 ?>
-
+<!-- --------------------------------------------------------------------------------- -->
 <html>
 
     <form class="donus" action="index.php">

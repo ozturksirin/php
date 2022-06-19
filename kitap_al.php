@@ -40,7 +40,7 @@ include 'oturum_kontrol.php';
    </header>
 
 </head> 
-
+<!-- --------------------------------------------------------------------------------- -->
 
 <meta charset="UTF-8">
     <title>KİTAP AL</title>
@@ -61,7 +61,7 @@ include 'oturum_kontrol.php';
     
     <h1>ALINAN KİTAPLAR</h1>
     <?php echo "<br>"; ?>
-
+    <!-- --------------------------------------------------------------------------------- -->
 
 <table class="table table-bordered table-dark">
   <thead>
@@ -77,7 +77,7 @@ include 'oturum_kontrol.php';
     </tr>
 
   </thead>
-  <!-- -------------------- -->
+  <!-- --------------------------------------------------------------------------------- -->
   <?php 
   
   $kitap_listele=$db ->prepare("SELECT * FROM proje.kitapal");
@@ -87,7 +87,7 @@ include 'oturum_kontrol.php';
   { $say++;?>
       
   
-  <!-- -------------------- -->
+  <!-- --------------------------------------------------------------------------------- -->
   <tbody>
     <tr>
     
@@ -106,7 +106,7 @@ include 'oturum_kontrol.php';
  </table>
 
 
-
+  <!-- --------------------------------------------------------------------------------- -->
 
 
  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -120,7 +120,7 @@ include 'oturum_kontrol.php';
  </body>
 </html>
 
-
+<!-- --------------------------------------------------------------------------------- -->
 <?php
   
 

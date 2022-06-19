@@ -41,6 +41,8 @@ require_once 'baglan.php';
     <title>DÜZENLE</title>
 
     <link rel="stylesheet" type="text/css" href="style.css">    
+
+    <!-- ----------------------------------------------------- -->
 <?php
     $kitapduzenle=$db ->prepare("SELECT * FROM proje.kitapal WHERE kitapAl_id=:id");
 $kitapduzenle->execute(array(
@@ -65,7 +67,7 @@ $duzenle=$kitapduzenle->fetch(PDO::FETCH_ASSOC);
     
     <h1>ALINAN KİTAPLAR</h1>
     <?php echo "<br>"; ?>
-
+    <!-- ----------------------------------------------------- -->
 
 <table class="table table-bordered table-dark">
   <thead>
@@ -81,7 +83,7 @@ $duzenle=$kitapduzenle->fetch(PDO::FETCH_ASSOC);
     </tr>
 
   </thead>
-  <!-- -------------------- -->
+  <!-- ----------------------------------------------------- -->
   <?php 
   
 

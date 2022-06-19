@@ -6,7 +6,7 @@ include 'yonetim_kontrol.php'
 
 
 ?>
-
+<!-- --------------------------------------------------------------------------------- -->
 <?php
 
 if(isset($_POST['yonetim_giris']))
@@ -40,9 +40,9 @@ if(isset($_POST['yonetim_giris']))
 }
 
 ?>
+<!-- --------------------------------------------------------------------------------- -->
 
 
-<!-- --------------------------- -->
 <!DOCTYPE html>
 <html lang="tr">
 <head>
@@ -124,7 +124,7 @@ if(isset($_POST['yonetim_giris']))
 </style>
 
 </head>
-
+<!-- --------------------------------------------------------------------------------- -->
 
 <body>
 
@@ -168,12 +168,12 @@ function closeNav() {
 
 <h1>DENETİM</h1>
     <?php echo "<br>"; ?>
-<!-- -------------------- -->
+<!-- --------------------------------------------------------------------------------- -->
   <?php  
   $uyariMetni="DÜZENLEME YAPTIKTAN SONRA SAYFAYI YENİLEYİNİZ!!";
   echo $uyariMetni;
   ?>
-<!-- -------------------- -->
+<!-- --------------------------------------------------------------------------------- -->
 
 <table class="table table-bordered table-dark">
   <thead>
@@ -191,7 +191,8 @@ function closeNav() {
     </tr>
 
   </thead>
-  <!-- -------------------- -->
+  <!-- --------------------------------------------------------------------------------- -->
+
   <?php 
   
 
@@ -225,6 +226,7 @@ function closeNav() {
  </table>
 
  <?php
+ 
 
  if(isset($_POST['duzenlemeislemi'])) 
 {
@@ -256,8 +258,8 @@ function closeNav() {
 }
 
 ?>
+<!-- --------------------------------------------------------------------------------- -->
 
-<!-- ---------------------------------------------------------------- -->
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
