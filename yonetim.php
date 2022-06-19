@@ -215,7 +215,7 @@ function closeNav() {
       <td><?php echo $kitapcek['kitapAl_sayfa'] ?></td>
       <td><?php echo $kitapcek['kitapAl_yayin_evi'] ?></td>
       <td><?php echo $kitapcek['kitapAl_baski_no'] ?></td>
-      <td><?php echo isset($kitapcek['kitapAl_zaman']) ?></td>
+      <td><?php echo $kitapcek['kitapal_zaman']?></td>
       <td><a href="duzenle.php?kitapAl_id=<?php echo $kitapcek['kitapAl_id']?>"> <button>DÜZENLE</button></td></a>
       <td><a href="kitap_geldi.php?kitapAl_id=<?php echo $kitapcek['kitapAl_id']?>&kitapsil=ok"> <button>KİTAP GELDİ(KAYDI SİL)</button></td></a>
       
