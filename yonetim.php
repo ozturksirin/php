@@ -64,7 +64,7 @@ if(isset($_POST['yonetim_giris']))
       <a class="nav-item nav-link active" href="./hakkında.html">HAKKINDA <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
-      <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
+      
 
 
       
@@ -139,7 +139,7 @@ if(isset($_POST['yonetim_giris']))
   <h1><?php echo $_SESSION['yonetim_adi']; ?></h1>
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
   <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
-  <a href="#">KİTAP EKLE</a>
+  <a href="kitap_ekle.php">KİTAP EKLE</a>
   <a href="#">YENİ ADMİN KAYIT</a>
   <a href="kayitli_kullanicilar.php">KAYITLI KULLANICILAR</a>
   <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
@@ -258,6 +258,50 @@ function closeNav() {
 }
 
 ?>
+<!-- -------------------------------------------- -->
+<h1>YENİ EKLENEN KİTAPLAR</h1>
+
+<br>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">NO</th>
+      <th scope="col">ID</th>
+      <th scope="col">ADI</th>
+      <th scope="col">YAZAR ADI</th>
+      <th scope="col">SAYFA SAYISI</th>
+      <th scope="col">YAYIN EVİ </th>
+      <th scope="col">BASKI NUMARASI</th>
+      <th scope="col">EKLENME ZAMANI</th>
+    </tr>
+  </thead>
+
+<?php 
+  
+  $kitap_liste=$db ->prepare("SELECT * FROM proje.kitapekle");
+  $kitap_liste->execute();
+  $say=0;
+  while($kitapcek=$kitap_liste->fetch(PDO::FETCH_ASSOC))
+  { $say++;?>
+      
+  
+  <tbody>
+    <tr>
+    
+      <th scope="row"><?php echo $say?></th>
+      <td><?php echo $kitapcek['kitap_id'] ?></td>
+      <td><?php echo $kitapcek['kitap_adi'] ?></td>
+      <td><?php echo $kitapcek['kitap_yazar_adi'] ?></td>
+      <td><?php echo $kitapcek['kitap_sayfa'] ?></td>
+      <td><?php echo $kitapcek['kitap_yayin_evi'] ?></td>
+      <td><?php echo $kitapcek['kitap_baski_no'] ?></td>
+      <td><?php echo $kitapcek['kitap_zaman'] ?></td>
+      
+    </tr>
+    <?php } ?>
+  </tbody>
+</table>
 <!-- --------------------------------------------------------------------------------- -->
 
   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

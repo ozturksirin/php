@@ -161,7 +161,7 @@ if(isset($_POST['btn_giris']))
     {
       $_SESSION['kayit_adi']=$kayit_adi;
       echo "giriş başarılı";
-      header('refresh: index.php.php?durum=basarili');
+      header('location: index.php?durum2=basarili');
 
       
     }

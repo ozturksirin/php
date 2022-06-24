@@ -1,6 +1,8 @@
 <?php
-
+ob_start();
+session_start();
 require_once 'baglan.php';
+include 'yonetim_kontrol.php';
 
 
 
