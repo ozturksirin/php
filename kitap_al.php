@@ -29,7 +29,7 @@ include 'oturum_kontrol.php';
       <a class="nav-item nav-link active" href="./hakkında.html">HAKKINDA <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
-      <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
+      <a href="./cikis.php"> <button type="submit"  >Çıkış Yap</button></a>
       
       
     </div>

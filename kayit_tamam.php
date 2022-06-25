@@ -74,7 +74,7 @@ if (isset($_POST['insertislemi']))
 
                     //echo "Kayıt Başarılı lütfen giriş yapınız";
 
-                     Header("Location:index.php?durum=ok");
+                     Header("Location:kayit_ol.php?durumok=ok");
             
                      exit;
                  }
@@ -90,7 +90,7 @@ if (isset($_POST['insertislemi']))
             } 
             else
             {
-                header("Location:kayit_ol.php?durum2=hata");
+                header("Location:kayit_ol.php?durum2hata=hata");
             
                 exit;
         
@@ -106,6 +106,12 @@ if (isset($_POST['insertislemi']))
         }
         
         
+    }
+
+    else
+    {
+        header("Location:kayit_ol.php?durumSifre=sifre");
+        exit;
     }
     
 

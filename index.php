@@ -32,7 +32,7 @@ include("baglan.php");
       <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
       <a class="nav-item nav-link" href="./kitap_al.php">KİTAP AL</a>
-      <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
+      <!-- <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a> -->
       
       
     </div>
@@ -70,10 +70,12 @@ include("baglan.php");
     <div class="card m-5 p-5">
 <!-- giriş yapma kısmı -->
     <form class="giris " action="kitap_al.php" method="POST">
-        KULLANICI ADI:<input required="" type="text" name="kayit_adi"/><br><br>
-        Şifre:<input required= "" type="password"  name="kayit_sifre"><br><br>
-        <button type="submit" name="btn_giris">GİRİŞ</button>
+        KULLANICI ADI:<br><input required="" type="text" name="kayit_adi"/><br><br>
+        Şifre:<br><input required= "" type="password"  name="kayit_sifre"><br><br>
+        <button type="submit" class="btn btn-primary" name="btn_giris">GİRİŞ</button>
     </form>
+    <br>
+    <a href="./cikis.php"> <button type="submit" class="btn btn-primary">Çıkış Yap</button></a>
 
 
     
