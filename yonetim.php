@@ -142,7 +142,7 @@ if(isset($_POST['yonetim_giris']))
   <a href="kitap_ekle.php">KİTAP EKLE</a>
   <a href="#">YENİ ADMİN KAYIT</a>
   <a href="kayitli_kullanicilar.php">KAYITLI KULLANICILAR</a>
-  <a href="./cikis.php"> <button type="submit" class="btn btn-primary" >Çıkış Yap</button></a>
+  <a href="./cikis.php"> <button type="submit">Çıkış Yap</button></a>
 </div>
 
 <div id="main">

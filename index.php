@@ -28,7 +28,8 @@ include("baglan.php");
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" href="./hakkında.html">HAKKINDA <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link active" href="./index.php">ANASAYFA <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" href="./hakkında.html">HAKKINDA</a>
       <a class="nav-item nav-link" href="./iletisim.html">İLETİŞİM</a>
       <a class="nav-item nav-link" href="./kayit_ol.php">KAYIT OL</a>
       <a class="nav-item nav-link" href="./kitap_al.php">KİTAP AL</a>
@@ -105,6 +106,7 @@ include("baglan.php");
 
 </div>
 </div> 
+<div class="container2" style="margin-left: 10%; margin-right: 10%;"><div class="card p-5">
  <!-- --------------------------------------------------------------------------------- -->
 <table class="table table-striped">
   <thead>
@@ -192,7 +194,8 @@ include("baglan.php");
   </tbody>
 </table>
 
-
+</div>
+</div>
 <p>© 2022 Öztürk Şirin Onyedi eylül üniversitesi Bandırma Meslek Yüksekokulu</p>
 </body>
 
