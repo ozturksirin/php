@@ -140,7 +140,6 @@ if(isset($_POST['yonetim_giris']))
   <img class="resim" src="kitap_resim/panel_image.jpg" width="270" height="215" />
   <a href="yonetim.php">GERİ GELEN KİTAPLAR</a> <!-- sayfaları buraya yazıcam -->
   <a href="kitap_ekle.php">KİTAP EKLE</a>
-  <a href="#">YENİ ADMİN KAYIT</a>
   <a href="kayitli_kullanicilar.php">KAYITLI KULLANICILAR</a>
   <a href="./cikis.php"> <button type="submit">Çıkış Yap</button></a>
 </div>
